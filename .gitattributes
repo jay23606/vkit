@@ -1,0 +1,3 @@
+# Keep line endings the same (LF) on Windows and Mac, so PRs don't show every line as changed.
+* text=auto eol=lf
+*.png binary
