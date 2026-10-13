@@ -4,7 +4,7 @@ Small tools for VIT students, built by students.
 
 vkit is the practice repo for the VOSS Labs workshop at Vidyalankar Institute of Technology, Mumbai. It is a plain HTML, CSS and JavaScript site with a few small tools, and each workshop participant works on one of its GitHub issues.
 
-Live site: (link added after the first deploy)
+Live site: https://voss-labs.github.io/vkit/
 
 ## Run it
 
