@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      # Mount this folder into the container (read-only), so your edits
+      # show up when you refresh the browser. No rebuild needed.
+      - ./:/usr/share/nginx/html:ro

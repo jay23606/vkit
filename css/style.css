@@ -1,0 +1,268 @@
+/* Colours for the whole site. Every other rule uses these variables. */
+:root {
+  --bg: #f6f7fb;
+  --text: #1f2333;
+  --card: #ffffff;
+  --border: #dde1ec;
+  --accent: #4f46e5;
+  --accent-text: #ffffff;
+  --muted: #6b7185;
+  --badge-bg: #fff4d6;
+  --badge-text: #8a6100;
+  --result-bg: #eef0ff;
+  --shadow: rgba(31, 35, 51, 0.08);
+}
+
+/* Basic page setup */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* Header at the top of every page */
+header {
+  padding: 24px 20px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+/* Grid of tool cards on the home page */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 20px;
+}
+
+.tool-card {
+  display: block;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
+  border-color: var(--accent);
+}
+
+.tool-card .emoji {
+  font-size: 2rem;
+}
+
+.tool-card h2 {
+  margin: 8px 0 4px;
+  font-size: 1.2rem;
+}
+
+.tool-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Small label, e.g. "Coming soon" */
+.badge {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Box that holds a tool's form */
+.panel {
+  max-width: 560px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+
+/* Form inputs */
+label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+/* Buttons */
+button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent-text);
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Box where a tool shows its answer */
+.result {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--result-bg);
+  border-radius: 10px;
+  min-height: 1.5em;
+}
+
+/* Hide the box until there is something to show */
+.result:empty {
+  display: none;
+}
+
+.result p {
+  margin: 4px 0;
+}
+
+/* SGPI calculator: one row per subject */
+.subject-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.subject-row > * {
+  min-width: 0;
+}
+
+/* Pomodoro timer */
+.timer-display {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Assignment tracker */
+.add-row {
+  display: flex;
+  gap: 8px;
+}
+
+.add-row input {
+  min-width: 0;
+}
+
+.add-row button {
+  margin-top: 0;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-list li span {
+  flex: 1;
+}
+
+.task-list li.done span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-list li button {
+  margin-top: 0;
+  padding: 6px 12px;
+}
+
+/* Footer on the home page */
+footer {
+  padding: 24px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

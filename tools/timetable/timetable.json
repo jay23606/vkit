@@ -1,0 +1,36 @@
+{
+  "Monday": [
+    { "time": "09:00", "subject": "Engineering Maths", "room": "Room 304" },
+    { "time": "10:00", "subject": "Data Structures", "room": "Room 304" },
+    { "time": "11:15", "subject": "DBMS", "room": "Room 210" },
+    { "time": "12:15", "subject": "Operating Systems", "room": "Room 210" },
+    { "time": "14:00", "subject": "Python Lab", "room": "Lab 2" }
+  ],
+  "Tuesday": [
+    { "time": "09:00", "subject": "Computer Networks", "room": "Room 305" },
+    { "time": "10:00", "subject": "Engineering Maths", "room": "Room 304" },
+    { "time": "11:15", "subject": "Data Structures Lab", "room": "Lab 1" },
+    { "time": "14:00", "subject": "DBMS", "room": "Room 210" }
+  ],
+  "Wednesday": [
+    { "time": "09:00", "subject": "Operating Systems", "room": "Room 210" },
+    { "time": "10:00", "subject": "DBMS", "room": "Room 210" },
+    { "time": "11:15", "subject": "Computer Networks", "room": "Room 305" },
+    { "time": "12:15", "subject": "Engineering Maths", "room": "Room 304" },
+    { "time": "14:00", "subject": "DBMS Lab", "room": "Lab 3" },
+    { "time": "15:00", "subject": "Mini Project", "room": "Lab 3" }
+  ],
+  "Thursday": [
+    { "time": "09:00", "subject": "Data Structures", "room": "Room 304" },
+    { "time": "10:00", "subject": "Operating Systems", "room": "Room 210" },
+    { "time": "11:15", "subject": "Computer Networks", "room": "Room 305" },
+    { "time": "14:00", "subject": "Computer Networks Lab", "room": "Lab 2" }
+  ],
+  "Friday": [
+    { "time": "09:00", "subject": "Engineering Maths", "room": "Room 304" },
+    { "time": "10:00", "subject": "Data Structures", "room": "Room 304" },
+    { "time": "11:15", "subject": "Operating Systems Lab", "room": "Lab 1" },
+    { "time": "14:00", "subject": "Python Lab", "room": "Lab 2" },
+    { "time": "15:00", "subject": "Mini Project", "room": "Lab 3" }
+  ]
+}

@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  # Checks that all the tests in tests/ pass.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - run: npm test
+
+  # Checks that the Docker image builds and actually serves the site.
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build the image
+        run: docker build -t vkit .
+
+      - name: Start the container
+        run: docker run -d --name vkit -p 8080:80 vkit
+
+      - name: Check the site responds
+        run: |
+          for i in $(seq 1 10); do
+            if curl -fsS http://localhost:8080/ > /dev/null &&
+               curl -fsS http://localhost:8080/tools/bunk-calculator/ > /dev/null; then
+              echo "Site is up."
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Site did not respond after 10 tries."
+          exit 1
+
+      - name: Show container logs
+        if: always()
+        run: docker logs vkit

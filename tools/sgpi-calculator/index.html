@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGPI Calculator · vkit</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header>
+    <a class="back-link" href="../../index.html">← All tools</a>
+    <h1>SGPI Calculator</h1>
+  </header>
+
+  <main>
+    <div class="panel">
+      <p>Enter the credits and grade for each subject.</p>
+
+      <div class="subject-row">
+        <input type="text" class="subject" aria-label="Subject 1 name" placeholder="Subject 1">
+        <input type="number" class="credits" aria-label="Subject 1 credits" placeholder="Credits">
+        <select class="grade" aria-label="Subject 1 grade">
+          <option>O</option>
+          <option>A+</option>
+          <option>A</option>
+          <option>B+</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>F</option>
+        </select>
+      </div>
+
+      <div class="subject-row">
+        <input type="text" class="subject" aria-label="Subject 2 name" placeholder="Subject 2">
+        <input type="number" class="credits" aria-label="Subject 2 credits" placeholder="Credits">
+        <select class="grade" aria-label="Subject 2 grade">
+          <option>O</option>
+          <option>A+</option>
+          <option>A</option>
+          <option>B+</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>F</option>
+        </select>
+      </div>
+
+      <div class="subject-row">
+        <input type="text" class="subject" aria-label="Subject 3 name" placeholder="Subject 3">
+        <input type="number" class="credits" aria-label="Subject 3 credits" placeholder="Credits">
+        <select class="grade" aria-label="Subject 3 grade">
+          <option>O</option>
+          <option>A+</option>
+          <option>A</option>
+          <option>B+</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+          <option>F</option>
+        </select>
+      </div>
+
+      <button id="calculate">Calculate</button>
+
+      <div class="result" id="result"></div>
+    </div>
+  </main>
+
+  <script src="../../js/theme.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
