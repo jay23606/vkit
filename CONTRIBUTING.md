@@ -146,6 +146,8 @@ Leave this terminal running. Open a second terminal with the **+** button in the
 
 Follow the steps in the issue until you see the bug (or notice the missing feature). If you can't, say so in the issue thread before you change anything.
 
+If your issue has the `screenshots` label, take a screenshot now, while the problem is still there. It is your "before" picture for the pull request.
+
 ### 8. Make your change
 
 Open the files your issue names (from the Explorer on the left of VS Code) and change only what the issue asks for. Using Codex or another AI is fine; read [Using AI](#using-ai-codex-etc) first.
@@ -221,19 +223,10 @@ gh auth login
    No banner? Pick your branch from the branch menu, then click **Contribute** > **Open pull request**.
 2. At the top, check where it goes: **base repository** must be `voss-labs/vkit` and **base** must be `main`. On the right you should see your fork and your branch.
 3. Write a short title that says what you changed, like your commit message.
-4. Copy this into the description and fill it in:
-
-   ```markdown
-   Closes #<issue number>
-
-   ## What I changed
-   <one or two sentences>
-
-   ## How I tested it
-   <what you tried in the browser, and that npm test passes>
-   ```
-
-   For example `Closes #12`. That line links your PR to the issue, and closes the issue when the PR is merged.
+4. The description box is already filled with a short form. Fill it in:
+   - After `Closes #`, type your issue number, for example `Closes #12`. That line links your PR to the issue, and closes the issue when the PR is merged.
+   - **What I changed** and **How I tested it**: a sentence or two each.
+   - **Screenshots**: needed if your issue has the `screenshots` label. Add one from before your fix and one from after. Windows: press `Win+Shift+S`, select the area, click in the box and press `Ctrl+V`. Mac: press `Cmd+Shift+4`, select the area, then drag the file from your Desktop into the box. (Take the "before" one in step 7, while the problem is still there.)
 5. Click **Create pull request**. Well done, that's your first PR.
 
 ## After you open it
