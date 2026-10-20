@@ -83,7 +83,8 @@
     </div>
   </main>
 
-  <footer>© 2025 vkit · made by workshop contributors</footer>
+  <footer>© <span id="footer-year"></span> vkit · made by workshop contributors</footer>
+  <script>document.getElementById("footer-year").textContent = new Date().getFullYear();</script>
 
   <script src="js/theme.js"></script>
 </body>
