@@ -52,7 +52,10 @@ function render() {
 
 // Add whatever is typed in the box as a new assignment.
 function addAssignment() {
-  assignments.push({ text: input.value, done: false });
+  const text = input.value.trim();
+  if (!text) return;
+
+  assignments.push({ text, done: false });
   input.value = "";
   save();
   render();
