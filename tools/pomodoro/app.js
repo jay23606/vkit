@@ -15,6 +15,7 @@ let timer = null;
 // Show the time that is left.
 function render() {
   display.textContent = formatTime(secondsLeft);
+  document.title = `${formatTime(secondsLeft)} - Pomodoro`;
 }
 
 // Called once every second while the timer is running.
@@ -33,6 +34,7 @@ function tick() {
 
 startButton.addEventListener("click", () => {
   message.textContent = "";
+  render();
   timer = setInterval(tick, 1000);
 });
 
@@ -47,6 +49,8 @@ resetButton.addEventListener("click", () => {
   secondsLeft = FOCUS_SECONDS;
   message.textContent = "";
   render();
+  document.title = "Pomodoro Timer · vkit";
 });
 
 render();
+document.title = "Pomodoro Timer · vkit";
