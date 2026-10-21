@@ -13,6 +13,7 @@ calcButton.addEventListener("click", () => {
   const held = Number(heldInput.value);
 
   const percent = attendancePercent(attended, held);
+  const colour = percent >= 75 ? "green" : percent >= 65 ? "orange" : "red";
   let message = `<p>Your attendance: ${percent.toFixed(2)}%</p>`;
 
   if (percent >= TARGET) {
@@ -24,4 +25,5 @@ calcButton.addEventListener("click", () => {
   }
 
   result.innerHTML = message;
+  result.className = `result attendance-${colour}`;
 });

@@ -11,6 +11,9 @@
   --badge-text: #8a6100;
   --result-bg: #eef0ff;
   --shadow: rgba(31, 35, 51, 0.08);
+  --result-green: #dcfce7;
+  --result-orange: #ffedd5;
+  --result-red: #fee2e2;
 }
 
 /* Basic page setup */
@@ -188,6 +191,18 @@ button:hover {
 
 .result p {
   margin: 4px 0;
+}
+
+.result.attendance-green {
+  background: var(--result-green);
+}
+
+.result.attendance-orange {
+  background: var(--result-orange);
+}
+
+.result.attendance-red {
+  background: var(--result-red);
 }
 
 /* SGPI calculator: one row per subject */
