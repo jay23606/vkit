@@ -16,5 +16,5 @@ calcButton.addEventListener("click", () => {
     });
   });
 
-  result.textContent = `Your SGPI: ${sgpi(subjects)}`;
+  result.textContent = `Your SGPI: ${sgpi(subjects).toFixed(2)}`;
 });
